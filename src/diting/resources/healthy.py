@@ -25,7 +25,7 @@ class HealthyResource(SyncAPIResource):
         This property can be used as a prefix for any HTTP method call to return
         the raw response object instead of the parsed content.
 
-        For more information, see https://www.github.com/stainless-sdks/diting-python#accessing-raw-response-data-eg-headers
+        For more information, see https://www.github.com/lean-zone/mytest#accessing-raw-response-data-eg-headers
         """
         return HealthyResourceWithRawResponse(self)
 
@@ -34,7 +34,7 @@ class HealthyResource(SyncAPIResource):
         """
         An alternative to `.with_raw_response` that doesn't eagerly read the response body.
 
-        For more information, see https://www.github.com/stainless-sdks/diting-python#with_streaming_response
+        For more information, see https://www.github.com/lean-zone/mytest#with_streaming_response
         """
         return HealthyResourceWithStreamingResponse(self)
 
@@ -65,7 +65,7 @@ class AsyncHealthyResource(AsyncAPIResource):
         This property can be used as a prefix for any HTTP method call to return
         the raw response object instead of the parsed content.
 
-        For more information, see https://www.github.com/stainless-sdks/diting-python#accessing-raw-response-data-eg-headers
+        For more information, see https://www.github.com/lean-zone/mytest#accessing-raw-response-data-eg-headers
         """
         return AsyncHealthyResourceWithRawResponse(self)
 
@@ -74,7 +74,7 @@ class AsyncHealthyResource(AsyncAPIResource):
         """
         An alternative to `.with_raw_response` that doesn't eagerly read the response body.
 
-        For more information, see https://www.github.com/stainless-sdks/diting-python#with_streaming_response
+        For more information, see https://www.github.com/lean-zone/mytest#with_streaming_response
         """
         return AsyncHealthyResourceWithStreamingResponse(self)
 

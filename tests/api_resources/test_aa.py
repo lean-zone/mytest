@@ -16,7 +16,7 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestAa:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_create(self, client: Diting) -> None:
         aa = client.aa.create(
@@ -25,7 +25,7 @@ class TestAa:
         )
         assert_matches_type(object, aa, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_create_with_all_params(self, client: Diting) -> None:
         aa = client.aa.create(
@@ -35,7 +35,7 @@ class TestAa:
         )
         assert_matches_type(object, aa, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_create(self, client: Diting) -> None:
         response = client.aa.with_raw_response.create(
@@ -48,7 +48,7 @@ class TestAa:
         aa = response.parse()
         assert_matches_type(object, aa, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_create(self, client: Diting) -> None:
         with client.aa.with_streaming_response.create(
@@ -69,7 +69,7 @@ class TestAsyncAa:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_create(self, async_client: AsyncDiting) -> None:
         aa = await async_client.aa.create(
@@ -78,7 +78,7 @@ class TestAsyncAa:
         )
         assert_matches_type(object, aa, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_create_with_all_params(self, async_client: AsyncDiting) -> None:
         aa = await async_client.aa.create(
@@ -88,7 +88,7 @@ class TestAsyncAa:
         )
         assert_matches_type(object, aa, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_create(self, async_client: AsyncDiting) -> None:
         response = await async_client.aa.with_raw_response.create(
@@ -101,7 +101,7 @@ class TestAsyncAa:
         aa = await response.parse()
         assert_matches_type(object, aa, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_create(self, async_client: AsyncDiting) -> None:
         async with async_client.aa.with_streaming_response.create(

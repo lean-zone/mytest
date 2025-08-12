@@ -16,13 +16,13 @@ base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 class TestHTTP:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_cancel_stream_chat(self, client: Diting) -> None:
         http = client.http.cancel_stream_chat()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_cancel_stream_chat(self, client: Diting) -> None:
         response = client.http.with_raw_response.cancel_stream_chat()
@@ -32,7 +32,7 @@ class TestHTTP:
         http = response.parse()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_cancel_stream_chat(self, client: Diting) -> None:
         with client.http.with_streaming_response.cancel_stream_chat() as response:
@@ -44,7 +44,7 @@ class TestHTTP:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_create_stream_chat(self, client: Diting) -> None:
         http = client.http.create_stream_chat(
@@ -52,7 +52,7 @@ class TestHTTP:
         )
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_create_stream_chat(self, client: Diting) -> None:
         response = client.http.with_raw_response.create_stream_chat(
@@ -64,7 +64,7 @@ class TestHTTP:
         http = response.parse()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_create_stream_chat(self, client: Diting) -> None:
         with client.http.with_streaming_response.create_stream_chat(
@@ -78,7 +78,7 @@ class TestHTTP:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_create_stream_chat2(self, client: Diting) -> None:
         http = client.http.create_stream_chat2(
@@ -86,7 +86,7 @@ class TestHTTP:
         )
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_create_stream_chat2(self, client: Diting) -> None:
         response = client.http.with_raw_response.create_stream_chat2(
@@ -98,7 +98,7 @@ class TestHTTP:
         http = response.parse()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_create_stream_chat2(self, client: Diting) -> None:
         with client.http.with_streaming_response.create_stream_chat2(
@@ -112,13 +112,13 @@ class TestHTTP:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_method_retrieve_chat(self, client: Diting) -> None:
         http = client.http.retrieve_chat()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_raw_response_retrieve_chat(self, client: Diting) -> None:
         response = client.http.with_raw_response.retrieve_chat()
@@ -128,7 +128,7 @@ class TestHTTP:
         http = response.parse()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     def test_streaming_response_retrieve_chat(self, client: Diting) -> None:
         with client.http.with_streaming_response.retrieve_chat() as response:
@@ -146,13 +146,13 @@ class TestAsyncHTTP:
         "async_client", [False, True, {"http_client": "aiohttp"}], indirect=True, ids=["loose", "strict", "aiohttp"]
     )
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_cancel_stream_chat(self, async_client: AsyncDiting) -> None:
         http = await async_client.http.cancel_stream_chat()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_cancel_stream_chat(self, async_client: AsyncDiting) -> None:
         response = await async_client.http.with_raw_response.cancel_stream_chat()
@@ -162,7 +162,7 @@ class TestAsyncHTTP:
         http = await response.parse()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_cancel_stream_chat(self, async_client: AsyncDiting) -> None:
         async with async_client.http.with_streaming_response.cancel_stream_chat() as response:
@@ -174,7 +174,7 @@ class TestAsyncHTTP:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_create_stream_chat(self, async_client: AsyncDiting) -> None:
         http = await async_client.http.create_stream_chat(
@@ -182,7 +182,7 @@ class TestAsyncHTTP:
         )
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_create_stream_chat(self, async_client: AsyncDiting) -> None:
         response = await async_client.http.with_raw_response.create_stream_chat(
@@ -194,7 +194,7 @@ class TestAsyncHTTP:
         http = await response.parse()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_create_stream_chat(self, async_client: AsyncDiting) -> None:
         async with async_client.http.with_streaming_response.create_stream_chat(
@@ -208,7 +208,7 @@ class TestAsyncHTTP:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_create_stream_chat2(self, async_client: AsyncDiting) -> None:
         http = await async_client.http.create_stream_chat2(
@@ -216,7 +216,7 @@ class TestAsyncHTTP:
         )
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_create_stream_chat2(self, async_client: AsyncDiting) -> None:
         response = await async_client.http.with_raw_response.create_stream_chat2(
@@ -228,7 +228,7 @@ class TestAsyncHTTP:
         http = await response.parse()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_create_stream_chat2(self, async_client: AsyncDiting) -> None:
         async with async_client.http.with_streaming_response.create_stream_chat2(
@@ -242,13 +242,13 @@ class TestAsyncHTTP:
 
         assert cast(Any, response.is_closed) is True
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_method_retrieve_chat(self, async_client: AsyncDiting) -> None:
         http = await async_client.http.retrieve_chat()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_raw_response_retrieve_chat(self, async_client: AsyncDiting) -> None:
         response = await async_client.http.with_raw_response.retrieve_chat()
@@ -258,7 +258,7 @@ class TestAsyncHTTP:
         http = await response.parse()
         assert_matches_type(object, http, path=["response"])
 
-    @pytest.mark.skip()
+    @pytest.mark.skip(reason="Prism tests are disabled")
     @parametrize
     async def test_streaming_response_retrieve_chat(self, async_client: AsyncDiting) -> None:
         async with async_client.http.with_streaming_response.retrieve_chat() as response:
